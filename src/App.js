@@ -8,8 +8,13 @@ export default class App extends Component {
     this.state = {accountData: 'loading...'}
   }
 
-  render() {
+  componentDidMount() {
+    console.log("componentDidMount");
     this.showData();
+  }
+
+  render() {
+    console.log("render");
     return (
       <View style={styles.container}>
         <Text style={styles.header}>Account Data</Text>
